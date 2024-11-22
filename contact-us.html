@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniso</title>
+    <link rel="icon" type="image/x-icon" href="./Images/miniso-logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="section-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo and Menu -->
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./Images/miniso-logo.png" alt="Miniso Logo" width="60" height="70">
+                </a>
+            </div>
+    
+            <!-- Navbar Links -->
+            <nav class="navbar" id="nav">
+                <ul class="d-flex align-items-center space-x-4 list-unstyled mb-0">
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="about.html">Brand</a>
+                        <div class="dropdown-content">
+                            <a href="#">Brand Profile</a>
+                            <a href="#">Founder</a>
+                            <a href="#">Development</a>
+                            <a href="#">Designer Team</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="services.html">Product</a>
+                        <div class="dropdown-content">
+                            <a href="#">Household Items</a>
+                            <a href="#">Daily Life Products</a>
+                            <a href="#">Health & Beauty</a>
+                            <a href="#">Fashion Accessories</a>
+                            <a href="#">Digital Products</a>
+                            <a href="#">Food & Beverage</a>
+                            <a href="#">Design Award</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="blog.html">Special Campaign</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="investors.html">Investors</a>
+                        <div class="dropdown-content">
+                            <a href="#">Overview</a>
+                            <a href="#">News Releases</a>
+                            <a href="#">SEC Filings</a>
+                            <a href="#">Governance</a>
+                            <a href="#">Stock Information</a>
+                            <a href="#">Events</a>
+                            <a href="#">Email Alerts</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link active" href="contact-us.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link " href="about-us.html">About Us</a>
+                    </li>
+    
+                    <!-- Login/Signup Buttons beside About Us -->
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Google Maps Section -->
+    <div class="container">
+        <div style="max-width:100%; overflow:hidden; width:100%; height:350px;">
+            <div id="my-map-display" style="height:100%; width:100%; max-width:100%;">
+                <iframe 
+                    style="height:100%; width:100%; border:0;" 
+                    frameborder="0" 
+                    src="https://www.google.com/maps/embed/v1/place?q=miniso+gujranwala&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opportunities for Cooperation Section -->
+    <section class="container contact-section">
+        <h2 style="font-size: 30px;">Opportunities for Cooperation</h2>
+        <hr>
+        <div class="grid-four--cols text-center" style="gap: 3rem;">
+            <div class="contact-card">
+                <h5>Contact For Legal Issue</h5>
+                <p>Mr. Ma</p>
+                <p><a href="mailto:compliance@miniso.com">compliance@miniso.com</a></p>
+            </div>
+            <div class="contact-card">
+                <h5>Contact For Supplier</h5>
+                <p>400-700-5559</p>
+                <p><a href="#">Please click here</a></p>
+            </div>
+            <div class="contact-card">
+                <h5>Contact For Media/PR</h5>
+                <p>pinpai@miniso.com</p>
+            </div>
+            <div class="contact-card">
+                <h5>Contact for Complaint</h5>
+                <p>complaint@miniso.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container contact-form-section">
+        <h2 style="font-size: 30px;">Get in Touch with Us</h2>
+        <hr>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Enter your phone number:</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" pattern="[0-9]{11}" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea id="message" placeholder="Type your message here..." rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="greeting"></p>
+    </section>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload on submit
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !phone) {
+                alert('Please fill all the required fields.');
+                return;
+            }
+
+            const greetingMessage = `
+                <h3>Thank you, ${name}!</h3>
+                <p>We will contact you at <strong>${email}</strong> or <strong>${phone}</strong>.</p>
+                <p>Your message: "${message}"</p>
+            `;
+            document.getElementById('greeting').innerHTML = greetingMessage;
+            document.getElementById('userForm').reset();
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <hr width="1190px" align="center" color="black">
+            <div class="footer-text" style="padding-top: 30px;">
+                <p align="center">名创优品（广州）有限责任公司</p>
+                <p align="center">&copy; 2023 MINISO CO.LTD ALL RIGHTS RESERVED</p>
+                <p align="center">粤ICP备2021004007号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

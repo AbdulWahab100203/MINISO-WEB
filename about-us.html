@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Miniso</title>
+
+  <!-- Link jQuery and jQuery UI Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./Images/miniso-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <script src="sliderengine/initslider-1.js"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .core-values, .team {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .core-values div, .team div {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: calc(33.33% - 20px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .core-values div:hover, .team div:hover {
+      transform: scale(1.05);
+    }
+
+    #hoverBox, #box, #fadeBox {
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      background-color: #ff5c62;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6454d;
+    }
+
+    #greeting, #text {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    #draggableBox {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+      cursor: move;
+    }
+
+    #addElement {
+      margin-top: 20px;
+    }
+
+    .fade-box-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #fadeBox {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+    }
+
+    #exploreMoreBox {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    #minisoHistory {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      background-color: #ff5c62;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6454d;
+    }
+
+    .feedback-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-card h5 {
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="section-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo and Menu -->
+        <div class="navbar-brand">
+            <a href="index.html">
+                <img src="./Images/miniso-logo.png" alt="Miniso Logo" width="60" height="70">
+            </a>
+        </div>
+
+        <!-- Navbar Links -->
+        <nav class="navbar" id="nav">
+            <ul class="d-flex align-items-center space-x-4 list-unstyled mb-0">
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="about.html">Brand</a>
+                    <div class="dropdown-content">
+                        <a href="#">Brand Profile</a>
+                        <a href="#">Founder</a>
+                        <a href="#">Development</a>
+                        <a href="#">Designer Team</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="services.html">Product</a>
+                    <div class="dropdown-content">
+                        <a href="#">Household Items</a>
+                        <a href="#">Daily Life Products</a>
+                        <a href="#">Health & Beauty</a>
+                        <a href="#">Fashion Accessories</a>
+                        <a href="#">Digital Products</a>
+                        <a href="#">Food & Beverage</a>
+                        <a href="#">Design Award</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="blog.html">Special Campaign</a>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="investors.html">Investors</a>
+                    <div class="dropdown-content">
+                        <a href="#">Overview</a>
+                        <a href="#">News Releases</a>
+                        <a href="#">SEC Filings</a>
+                        <a href="#">Governance</a>
+                        <a href="#">Stock Information</a>
+                        <a href="#">Events</a>
+                        <a href="#">Email Alerts</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link" href="contact-us.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown relative">
+                    <a class="nav-link active" href="about-us.html">About Us</a>
+                </li>
+
+                <!-- Login/Signup Buttons beside About Us -->
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>About Us - Miniso</h1>
+    <p>Miniso is a Japanese-inspired brand offering a variety of high-quality, affordable lifestyle products.</p>
+
+    <h2>Our Story</h2>
+    <p>Founded in 2013, Miniso quickly became a global phenomenon by bringing a unique blend of innovation, quality, and affordability to lifestyle products. Our goal is to make everyday essentials accessible to everyone.</p>
+    <button id="exploreMoreButton">Explore More</button>
+    <div id="displayData"></div>
+    <div id="exploreMoreBox">
+      <p>Click the button below to learn more about Miniso's history!</p>
+      <div id="minisoHistory">
+        <h2>Miniso History</h2>
+        <p>Miniso was founded with the aim of providing high-quality products at reasonable prices. Our journey has been one of constant growth, expanding our reach to over 80 countries worldwide.</p>
+      </div>
+    </div>
+
+    <h2>Mission & Vision</h2>
+    <p><strong>Mission:</strong> To deliver joy through affordable and high-quality products.</p>
+    <p><strong>Vision:</strong> To become a household name recognized for quality lifestyle products around the world.</p>
+
+    <h2>Core Values</h2>
+    <div class="core-values">
+      <div>
+        <h3>Quality</h3>
+        <p>We maintain the highest standards for all our products.</p>
+      </div>
+      <div>
+        <h3>Affordability</h3>
+        <p>We believe quality products should be accessible to everyone.</p>
+      </div>
+      <div>
+        <h3>Innovation</h3>
+        <p>We continuously innovate to improve our product offerings.</p>
+      </div>
+    </div>
+
+    <h2>Meet Our Team</h2>
+    <div class="team">
+      <div>
+        <h3>Founder</h3>
+        <p>Mr. Miyake Junya founded Miniso to bring Japanese design to the world.</p>
+      </div>
+      <div>
+        <h3>Design Team</h3>
+        <p>Our talented team brings innovation to every product we create.</p>
+      </div>
+      <div>
+        <h3>Operations Team</h3>
+        <p>We ensure smooth operations across all global locations.</p>
+      </div>
+    </div>
+
+
+  <div class="container mt-5">
+    <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <label for="username">Name:</label>
+        <input type="text" id="username" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" rows="3" required></textarea><br><br>
+        
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required><br><br>
+        
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+    <<h3 class="mt-5">Feedbacks</h3>
+    <div id="feedbackList"></div>
+  </div>
+  <script src="feedback.js"></script>
+</body>
+</html>

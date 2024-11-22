@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniso</title>
+    <link rel="icon" type="image/x-icon" href="./Images/miniso-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <script src="sliderengine/initslider-1.js"></script>
+    <style>
+        .category {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #product-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="section-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo and Menu -->
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./Images/miniso-logo.png" alt="Miniso Logo" width="60" height="70">
+                </a>
+            </div>
+    
+            <!-- Navbar Links -->
+            <nav class="navbar" id="nav">
+                <ul class="d-flex align-items-center space-x-4 list-unstyled mb-0">
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="about.html">Brand</a>
+                        <div class="dropdown-content">
+                            <a href="#">Brand Profile</a>
+                            <a href="#">Founder</a>
+                            <a href="#">Development</a>
+                            <a href="#">Designer Team</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="services.html">Product</a>
+                        <div class="dropdown-content">
+                            <a href="#">Household Items</a>
+                            <a href="#">Daily Life Products</a>
+                            <a href="#">Health & Beauty</a>
+                            <a href="#">Fashion Accessories</a>
+                            <a href="#">Digital Products</a>
+                            <a href="#">Food & Beverage</a>
+                            <a href="#">Design Award</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="blog.html">Special Campaign</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="investors.html">Investors</a>
+                        <div class="dropdown-content">
+                            <a href="#">Overview</a>
+                            <a href="#">News Releases</a>
+                            <a href="#">SEC Filings</a>
+                            <a href="#">Governance</a>
+                            <a href="#">Stock Information</a>
+                            <a href="#">Events</a>
+                            <a href="#">Email Alerts</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link active" href="about-us.html">About Us</a>
+                    </li>
+    
+                    <!-- Login/Signup Buttons beside About Us -->
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>Welcome to My Website</h1>
+    <?php
+    // Define variables for personalization
+    $userName = "Abdul Wahab"; // Change this to any name you want
+    $currentDate = date("l, F j, Y"); // Get the current day, month, and year
+
+    // Output the personalized greeting
+    echo "<p>Hello, <strong>$userName</strong>! Welcome to the site.</p>";
+    echo "<p>Today's date is: <em>$currentDate</em>.</p>";
+    ?>
+</body>
+</html>

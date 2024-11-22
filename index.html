@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniso</title>
+    <link rel="icon" type="image/x-icon" href="./Images/miniso-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <script src="sliderengine/initslider-1.js"></script>
+    <style>
+        .category {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #product-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <script src="home.js"></script>
+    <header class="section-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo and Menu -->
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./Images/miniso-logo.png" alt="Miniso Logo" width="60" height="70">
+                </a>
+            </div>
+    
+            <!-- Navbar Links -->
+            <nav class="navbar" id="nav">
+                <ul class="d-flex align-items-center space-x-4 list-unstyled mb-0">
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="about.html">Brand</a>
+                        <div class="dropdown-content">
+                            <a href="#">Brand Profile</a>
+                            <a href="#">Founder</a>
+                            <a href="#">Development</a>
+                            <a href="#">Designer Team</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="services.html">Product</a>
+                        <div class="dropdown-content">
+                            <a href="#">Household Items</a>
+                            <a href="#">Daily Life Products</a>
+                            <a href="#">Health & Beauty</a>
+                            <a href="#">Fashion Accessories</a>
+                            <a href="#">Digital Products</a>
+                            <a href="#">Food & Beverage</a>
+                            <a href="#">Design Award</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="blog.html">Special Campaign</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="investors.html">Investors</a>
+                        <div class="dropdown-content">
+                            <a href="#">Overview</a>
+                            <a href="#">News Releases</a>
+                            <a href="#">SEC Filings</a>
+                            <a href="#">Governance</a>
+                            <a href="#">Stock Information</a>
+                            <a href="#">Events</a>
+                            <a href="#">Email Alerts</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+    
+                    <!-- Login/Signup Buttons beside About Us -->
+                    <div class="navbar-buttons">
+                        <li class="nav-item">
+                            <a href="login.html" class="btn btn-login">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1200px;margin:0px auto 0px;">
+            <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+                <ul class="amazingslider-slides" style="display:none;">
+                    <li><img src="images/IR-banner%285%29.jpg" /></li>
+                    <li><img src="images/%E7%BD%91%E7%AB%99%E9%A6%96%E9%A1%B5BANNER-1920x1080.jpg" /></li>
+                    <li><img src="images/%E8%A3%B8%E7%86%8A%E5%AE%98%E7%BD%91banner%281%29-01.jpg" /></li>
+                    <li><img src="images/%E9%A6%96%E9%A1%B5banner.jpeg" /></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <div class="grid grid-two--cols">
+            <div class="background-image">
+                <img src="./Images/brandconceptnew.jpg" alt="">
+                <p class="overlay-text">Brand Profile</p>
+            </div>
+            <div class="grid-two--rows">
+                <div class="franchise-info">
+                    <div class="heading-para">Franchise Information</div>
+                    <p>We are looking for master franchise!</p>
+                    <div class="center-container">
+                        <button class="learn-more-btn">
+                            <span>LEARN MORE</span>
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="background-image">
+                    <img src="./Images/distributor.jpg" alt="">
+                    <hr class="overlay-text-row-1" width="390px" align="center" color="white">
+                    <p class="overlay-text-1">Franchises</p>
+                    <hr class="overlay-text-row-2" width="390px" align="center" color="white">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="heading-container">
+            <h2>Best Choice</h2>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-six--cols" style="padding-top: 5%;">
+            <div class="category" data-category="household" onmouseover="showCategory('household')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="8" width="16" height="12"></rect>
+                        <path d="M12 2 L2 7 L12 12 L22 7 Z"></path>
+                    </svg>
+                </div>
+                <p>Household Items</p>
+            </div>
+            
+            <div class="category" data-category="daily-life" onmouseover="showCategory('daily-life')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="6" y="3" width="12" height="18" rx="2" ry="2"></rect>
+                        <path d="M6 9 L18 9"></path>
+                    </svg>
+                </div>
+                <p>Daily Life Products</p>
+            </div>
+            
+            <div class="category" data-category="health-beauty" onmouseover="showCategory('health-beauty')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9c27b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1 L15 4 L15 8 L9 8 L9 4 Z"></path>
+                        <rect x="9" y="8" width="6" height="10"></rect>
+                        <path d="M9 18 L15 18 L15 23 L9 23 Z"></path>
+                    </svg>
+                </div>
+                <p>Health & Beauty</p>
+            </div>
+            
+            <div class="category" data-category="fashion" onmouseover="showCategory('fashion')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3f51b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 9 12 2 19 9 19 15 12 22 5 15"></polygon>
+                        <line x1="5" y1="9" x2="19" y2="9"></line>
+                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                    </svg>
+                </div>
+                <p>Fashion Accessories</p>
+            </div>
+            
+            <div class="category" data-category="electronics" onmouseover="showCategory('electronics')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <p>Digital Products</p>
+            </div>
+            
+            <div class="category" data-category="food" onmouseover="showCategory('food')">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                </div>
+                <p>Food & Beverage</p>
+            </div>
+        </div>
+        <hr>
+        
+
+        <!-- Product Display Area -->
+        <div id="product-display" class="product-display ">
+            <h3 id="product-title"></h3>
+            <p id="product-description"></p>
+            <img id="product-image" src="" alt="Product Image" />
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="heading-container">
+            <h2 >News</h2>
+        </div>
+        <div class="grid grid-three--cols" style="padding-top: 5%;">
+            <div>
+                <img src="./Images/1.png" alt="" height="260px" width="385px" >
+                <h2 class="hover-text">MINISO Opens its 2000th Store Outside of...</h2>
+                <font  style="font-size: 12px; padding-top: 30px; color: rgb(40, 39, 39);"> On October 1st, 2022, Chinese lifestyle retailer MINISO <br> (NYSE: MNSO, HKEX: 9896) launched its 2000th store <br> outside of China, bringing its signature fun, affordable,</font>
+            </div>
+            <div>
+                <img src="./Images/2.png" alt=""  height="260px" width="385px">
+                <h2 class="hover-text">MINISO’s Q2 2022 revenue increased 20...</h2>
+                <font style="font-size: 12px; padding-top: 30px; color: rgb(40, 39, 39);">NYSE-listed lifestyle retailer MINISO posted an  adjusted <br> net profit of US$33.6 million in Q2 2022 and <br>an adjusted net margin of 7.7%, a record high since the</font>
+
+            </div>
+            <div>
+                <img src="./Images/3.jpg" alt=""  height="260px" width="385px">
+                <h2 class="hover-text">MINISO sets foot in New York’s most ex...</h2>
+                <font style="font-size: 12px; padding-top: 30px; color: rgb(40, 39, 39);"> Lifestyle retailer MINISO is officially welcoming <br>
+                    customers at the prime location in SoHo, New York <br>
+                    City, bringing its signature vibrant, fun, and quality</font>
+            </div>
+        </div>
+    </div>
+    <div class="center-container">
+        <button class="learn-more-btn">
+            <span>LEARN MORE</span>
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+
+    <footer>
+        <div class="container">
+        <hr width="1190px" align="center" color="black">
+        <div class="footer-text" style="padding-top: 30px;">
+                <p align="center">名创优品（广州）有限责任公司</p>
+                <p align="center">&copy;COPYRIGHT 2023 MINISO CO.LTD ALL RIGHT RESERVED</p>
+                <p align="center">&copy;Copyright Miniso.com</p>
+                <p align="center">粤ICP备2021004007号</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

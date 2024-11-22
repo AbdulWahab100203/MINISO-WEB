@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="./Images/miniso-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="container p-4 bg-white shadow rounded" style="max-width: 400px; height: 450px; padding-top:100px">
+        
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h2 class="text-center font-weight-bold mb-4">Login</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="loginUsername" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me?</label>
+                </div>
+                <button type="button" id="loginBtn" class="btn btn-block text-white" style="background-color: #ff5c8d;">Login</button>
+            </form>
+            <p id="loginStatus" class="text-center mt-2"></p> <!-- Status Message for Login -->
+            <p class="text-center mt-3">
+                <a href="#" class="text-muted">Forgot Password?</a>
+            </p>
+            <p class="text-center mt-3">
+                Need an account? <a href="#" id="showSignupForm" class="font-weight-bold" style="color: #ff5c8d;">Sign up</a>
+            </p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" style="display: none;">
+            <h2 class="text-center font-weight-bold mb-4">Sign Up</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="signupUsername" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="button" id="signupBtn" class="btn btn-block text-white" style="background-color: #ff5c8d;">Sign Up</button>
+            </form>
+            <p id="signupStatus" class="text-center mt-2"></p> <!-- Status Message for Signup -->
+            <p class="text-center mt-3">
+                Already have an account? <a href="#" id="showLoginForm" class="font-weight-bold" style="color: #ff5c8d;">Log in here</a>
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
